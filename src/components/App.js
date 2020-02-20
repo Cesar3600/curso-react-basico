@@ -1,9 +1,10 @@
 import React from 'react'
-import BadgesNew from './Badges'
+import BadgesNew from '../pages/BadgesNew'
+import Badge from '../pages/Badge'
 
 const App = () => {
   return(
-    <BadgesNew/>
+    <Badge/>
   )
 }
 

@@ -1,17 +1,15 @@
-import React,{Component} from 'react'
+import React from 'react'
 
 
-class NavBar extends Component{
-  render(){
+const NavBar = props => {
     return(
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src={this.props.logo} width="30" height="30" class="d-inline-block align-top" alt="logo platzi conf"/>
+      <nav className="navbar navbar-light bg-light">
+        <a className="navbar-brand" href="/">
+          <img src={props.logo} width="30" height="30" className="d-inline-block align-top" alt="logo platzi conf"/>
           <span>Conf</span>
           <span>platzi</span>
         </a>
       </nav>
     )
-  }
 }
 export default NavBar
