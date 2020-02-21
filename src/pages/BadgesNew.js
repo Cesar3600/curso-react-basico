@@ -1,6 +1,4 @@
 import React,{Component} from 'react'
-import NavBar from '../components/NavBar'
-import Logo from '../images/logo.svg'
 import Badges from '../components/Badges'
 import BadgesForm from '../components/BadgesForm'
 
@@ -29,7 +27,6 @@ class BadgesNew extends Component{
   render(){
     return(
       <div className="container-fluid">
-        <NavBar logo={Logo}/>
         <div className="container">
           <div className="row">
             <div className="col-md-6">
