@@ -3,6 +3,8 @@ import React,{Component} from 'react'
 import NavBar from '../components/NavBar'
 import logo from '../images/logo.svg'
 import BadgeList from '../components/BadgeList'
+import {Link} from 'react-router-dom'
+
 
 class Badge extends Component{
   state = {
@@ -43,6 +45,11 @@ class Badge extends Component{
     return(
       <div className="container-fluid">
         <NavBar logo={logo}/>
+        <div className="Badges__container">
+          <div className="Badges__buttons">
+            <Link to="/badges/new" className="btn btn-primary">New Badge</Link>
+          </div>
+        </div>
         {
           <BadgeList data={this.state.data}/>
         }

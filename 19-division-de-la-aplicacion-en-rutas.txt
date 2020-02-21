@@ -1,0 +1,43 @@
+
+
+
+
+utlizar react-router-dom en un componente stateless donde se llame a todos los demas componentes
+se necesita ReactRouter para que envuelva todo lo que sera afectado por react-router-dom
+
+Ademas necesita que un solo elemento sea envuelto
+
+por eso aplicamos el componente Switch, que leera lo que esta escrito en la ruta del navegador
+y lo comparara con el path de cada Router, si coincide, renderizada el componente que esta
+asociado a cada uno de ellos
+
+Router tiene uns propiedad llamada path que especifica la ruta que debe estar en el navegador para
+llamar y mostrar el elemento que es llamado por la propiedad component
+
+si las rutas son parecidas es mejor utilizar la propiedad exact para decirle a router que necesita que
+el path de cada elemento debe coincidir exactamente con la ruta capturada en el navegador
+
+
+por ultimo en el boton new badges reemplazamos 'a' por 'Link' y 'href' por 'to' importamos Link desde
+la libreria react-router-dom
+
+
+siempre debemos checkear el funcionamiento desde le pestaña react del inspector de objetos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
