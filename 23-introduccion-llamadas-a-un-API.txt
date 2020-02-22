@@ -1,0 +1,33 @@
+
+INTRODUCCION A LAS LLAMADAS DE UN API
+
+Cada llamada a una api tiene 3 estados:
+
+loading -> se envia la peticion y esperamos un resultado
+
+esto puede traer un error o datos:
+
+error -> puede haber un error 
+datos -> puede llegarte con datos vacios o varios datos
+
+
+
+
+
+Introducción llamadas a un API
+Las llamadas a una API siguen un patrón similar siempre que las hacemos, cada llamada consta de tres estados:
+
+Loading: cuando la petición se envía y estamos esperando.
+Error: se debe dejar un mensaje para el usuario para arreglar el error o volver a intentarlo.
+Data: los datos nos pueden llegar de dos formas, o en error o con los datos requeridos.
+
+
+
+
+
+
+
+
+
+
+
