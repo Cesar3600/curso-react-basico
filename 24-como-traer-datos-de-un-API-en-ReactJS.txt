@@ -17,5 +17,3 @@ en characters este es el link para llevarse los datos de todos los caracteres:
 https://rickandmortyapi.com/api/character/
 
 
-
-
