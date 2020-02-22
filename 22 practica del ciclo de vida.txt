@@ -1,0 +1,67 @@
+
+PRACTICA DEL CICLO DE VIDA
+
+el estado siempre debe ir dentro del constructor
+
+
+constructor(props){
+  super(props)
+  this.state = {
+    ..AQUI VIVIRAN LOS ESTADOS INICIALIZADOS
+
+  }
+}
+
+el orden de ejecucion es :
+
+1 constructor
+2 render
+3 componentDidMount
+4 render
+5 componentDidUpdate
+6 componentWillUnmount
+
+
+
+ se ejecuta el constructor y se inicializan los estados
+
+render dibuja la estructura jsx sin datos desde el estado a no ser 
+que los estados tengan valores por defecto
+
+se ejecuta componentDidMount inmediatamente despues del primer render
+normalmente aqui se hace las llamadas a la API
+y se setea el estado
+
+al hacer el cambio en el estado dispara de nuevo la carga de la jsx pero solo
+donde sea diferente de la estructura del primer render.
+
+seguidamente como se esta actualizando  se ejecuta componentDidUpdate que recibe
+los siguientes parametros prevProps y prevState
+
+en componentWillUnmount es el lugar donde se debe desmontar todos los metodos que
+consumen memoria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
