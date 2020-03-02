@@ -1,0 +1,13 @@
+
+
+MEJORANDO LA EXPERIENCIA DEL USUARIO DURANTE UNA PETICION
+
+
+basicamente reemplaza lo que se muestra en vez del texto loading y error por componentes
+que no son mas que funciones puras
+
+la de loading tiene una css que anima al componentes
+
+la de error tiene estilos y recibe una prop de error que es el estado error y e muestra
+centrado en la pantalla
+
