@@ -1,0 +1,91 @@
+
+
+Solicitando Datos (GET)
+-----------------------
+
+para esto ya existe un archivo api
+
+api.js
+
+
+.
+.
+.
+const api = {
+  badges: {
+    list() {
+      //return []
+      throw new Error("Se jodio la wea po")
+      //return callApi('/badges');
+    },
+    .
+    .
+    .
+
+
+Para las pruebas se ha modificado levemente el archivo api:
+dentro del objeto badges el metodo list tira un error:
+throw
+
+
+
+  fetchData = async () => {
+    this.setState({
+      loading: true,
+      error:null
+    })
+    try{
+      const data = await Api.badges.list()
+      this.setState({
+        data,
+        loading:false
+      })
+
+    }catch(err){
+      this.setState({
+        error: err,
+        loading:false
+      })
+    }
+  }
+
+
+fetchData es un metodo que es llamado en componentDidMount es asincrono(async)
+setea el estado loading en true y error en null debido a que componentDidMount se llamaria alguna otra vez
+se tiene una estructura de try y catch, try si es correcto  catch si es incorrecto
+
+si es correcto espera (await) que Api.badges.list() devuelva una respuesta 
+la respuesta se aloja en la constante data
+se setea data y cambia a false el estado loading ya que ya se dejo de cargar
+caso contrario si hay error al ejecutar la llamada de datos se dispara un error que
+hace que se ejecute catch, que tiene el aprametro err
+setea el estado de error: null a error: err y cambia el loading a false por que ya hubo una respuesta 
+que ha sdo erronea.
+
+.
+.
+.
+render(){
+    if(this.state.loading === true){
+      return 'loading ...'
+    }
+    if(this.state.error){
+      return `error --> ${this.state.error.message}`
+    }
+.
+.
+.
+
+ese codigo es por si loading esta true muestre la palkabra loading o 
+si existe un error que muestre el mensaje de error
+
+
+
+
+
+
+
+
+
+
+
