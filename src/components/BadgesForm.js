@@ -1,10 +1,8 @@
 
-import React,{Component} from 'react'
+import React from 'react'
 
-class BadgesForm extends Component{
-
-  render(){
-    const {handleChange,handleSubmit,formData : { name, jobTitle }} = this.props
+const BadgesForm = props => {
+    const {handleChange,handleSubmit,formData : { firstName, jobTitle,email }} = props
     return(
       <div className="col-md-6">
         <form onSubmit={handleSubmit}>
@@ -12,11 +10,11 @@ class BadgesForm extends Component{
             <label>Name</label>
             <input
               onChange={handleChange}
-              value={name}
+              value={firstName}
               type="text"
               className="form-control"
               id="badgeName"
-              name='name'
+              name='firstName'
               placeholder="add name"
             />
           </div>
@@ -32,11 +30,22 @@ class BadgesForm extends Component{
               placeholder="add charge"
             />
           </div>
+          <div className="form-group">
+            <label>e-mail</label>
+            <input
+              onChange={handleChange}
+              value = {email}
+              type="text"
+              className="form-control"
+              id="badgeEmail"
+              name='email'
+              placeholder="add e-mail"
+            />
+          </div>
           <button type="submit" className="btn btn-primary"> ADD + </button>
         </form>
       </div>
     )
-  }
 }
 export default BadgesForm
 

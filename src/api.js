@@ -25,8 +25,8 @@ const api = {
   badges: {
     list() {
       //return []
-      throw new Error("Se jodio la wea po")
-      //return callApi('/badges');
+      //throw new Error("Se jodio la wea po")
+      return callApi('/badges');
     },
     create(badge) {
       return callApi(`/badges`, {

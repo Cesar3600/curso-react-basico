@@ -1,14 +1,18 @@
 import React,{Component} from 'react'
 import Badges from '../components/Badges'
 import BadgesForm from '../components/BadgesForm'
-
+import Api from '../api'
 
 class BadgesNew extends Component{
   state = {
     form:{
-      name:'',
-      jobTitle:''
-    }
+      firstName:'',
+      jobTitle:'',
+      email:'',
+      avatarUrl:''
+    },
+    error:null,
+    loading:true
   }
 
   handleChange = e => {
@@ -20,8 +24,22 @@ class BadgesNew extends Component{
     })
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault()
+    this.setState({
+      loading:true, error:null
+    })
+    try{
+      await Api.badges.create(this.state.form)
+      this.setState({
+        loading:false        
+      })
+    }catch(err){
+      this.setState({
+        error:err,
+        loading:false
+      })
+    }
   }
 
   render(){

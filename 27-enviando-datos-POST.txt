@@ -1,0 +1,43 @@
+
+ENVIANDO DATOS POST
+
+En el formulario cambiar el metodo submit para que venga a travez de props
+
+
+handleSubmit es un metodo de badgesNew que usa api.badges.create y le pasa el contenido del estado form
+es una funcion asincrona y esta dentro de una estructura try catch 
+
+  handleSubmit = async e => {
+    e.preventDefault()
+    this.setState({
+      loading:true, error:null
+    })
+    try{
+      await Api.badges.create(this.state.form)
+      this.setState({
+        loading:false        
+      })
+    }catch(err){
+      this.setState({
+        error:err,
+        loading:false
+      })
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

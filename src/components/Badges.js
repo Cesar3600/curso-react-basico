@@ -1,4 +1,5 @@
 import React from 'react'
+import Gravatar from './gravatar.js'
 
 const Badges = props => {
 
@@ -10,6 +11,7 @@ const Badges = props => {
           <div className="card">
             <img src="/" className="card-img-top" alt=""/>
             <div className="card-body">
+              <Gravatar data={props.form}/>
               <h5 className="card-title">{name}</h5>
               <p className="card-text">{jobTitle}</p>
             </div>
