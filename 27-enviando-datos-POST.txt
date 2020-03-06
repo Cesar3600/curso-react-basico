@@ -26,6 +26,17 @@ es una funcion asincrona y esta dentro de una estructura try catch
   }
 
 
+al inicio de cada metodo llamado por el formulario
+se llama a setState para setear el estado de loading: ya que este metodo puedo haber sido llamado por segunda vez
+y haber quedado su valor por defecto como False.
+ademas pudo haberse dado un error y llenado este estado con err venido del catch del metodo.
+este estado volvera a false.
+
+
+
+
+
+
 
 
 
